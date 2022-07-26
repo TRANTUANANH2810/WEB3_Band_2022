@@ -63,7 +63,7 @@ html {
     display: block;
 }
 
-.place-buy-btn:hover,
+
 #nav > li:hover > a,
 #nav .subnav li:hover a{
     color: #000;
@@ -296,6 +296,12 @@ html {
     margin-top: 15px;
 
 }
+.place-buy-btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
 
 
 
@@ -316,14 +322,16 @@ html {
     align-items: center;
     justify-content: center;
     display: none;
+    
 }
 
 .modal-container {
     background: #fff;
     width: 900px;
-    max-width: calc(100%-32px);/* co nhỏ  vẩn hở một khoảng 16px mỗi bên*/
+    max-width: 96%; /* co nhỏ  vẩn hở một khoảng 16px mỗi bên*/
     min-height: 200px;
     position: relative;
+    animation: modalFaceIn ease .6s; /* chuyển động của modal*/
 }
 
 .modal-header {
@@ -382,11 +390,11 @@ html {
 
 element.style {
 }
+
 #buy-ticket:hover {
     opacity: 0.7;
 }
-#buy-ticket:hover {
-}
+
 #buy-ticket {
     background: #009688;
     border: none;
@@ -405,8 +413,18 @@ element.style {
     color:  #2196F3;
 
 }
-
-.modal-open {
+.modal.open{
     display: flex;
+}
+
+@keyframes modalFaceIn {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
