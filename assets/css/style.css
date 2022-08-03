@@ -59,8 +59,16 @@ html {
     margin-top: 8px !important;
 }
 
+.s-mt-8 {
+    margin-top: 8px;
+}
+
 .mt-16 {
     margin-top: 16px !important;
+}
+
+.mt-32 {
+    margin-top: 32px !important;
 }
 
 .btn {
@@ -233,7 +241,7 @@ html {
 
 
 #content {
-
+    /* padding-top: 64px; */
 }
 
 #content .content-section {
@@ -270,7 +278,7 @@ html {
 }
 
 #content .member-list {
-    padding-top: 48px;
+    padding-top: 32px;
 }
 
 #content .member-name {
@@ -324,9 +332,7 @@ html {
 }
 
 .place-list {
-    margin-top: 32px;
- 
-
+    margin-top: 16px;
 }
 
 .place-img:hover {
