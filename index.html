@@ -5,16 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
+    <!-- Link logo web -->
     <link rel="icon" href="./assets/img/icon/Band_icon.jpg" type="image/x-icon" />
+    
+    <!-- link Css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <!-- link Responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- Link Icon sd trong WEb -->
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+
 </head>
 <body>
     <div id="main">
 
         <div id="header">
            <!-- Begin : Nav -->
-          <ul id="nav">
+          <ul id="nav"> 
             <li><a href="#">Home</a></li>
             <li><a href="#band">band</a></li>
             <li><a href="#tour">Tour</a></li>
@@ -33,11 +42,16 @@
           </ul>
           <!-- End : Nav -->
 
-          <!-- Begin: Search -->
+          <!-- mobile menu btn -->
+          <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="menu-icon ti-menu"></i>
+          </div>
+
+          <!--  Search -->
           <div class="search-btn">
             <i class="search-icon ti-search"></i>
           </div>
-          <!-- End: Search -->
+
 
         </div>
 
@@ -213,6 +227,7 @@
         </div>
     </div>
 
+    <!-- JS Buy ticket -->
    <script>
     const buyBtns = document.querySelectorAll('.js-buy-ticket')
     const modal = document.querySelector('.js-modal')
@@ -227,7 +242,7 @@
         modal.classList.remove("open")
     }
 
-    // lọc qua từn thẻ button và nghe hành vi click
+    // lọc qua từng thẻ button và nghe hành vi click
     for (const  buyBtn of buyBtns) {
         buyBtn.addEventListener('click',showBuyTicket)
     }
@@ -243,7 +258,39 @@
     
    </script>
    
+   <!--responsive -->
+   <script>
+    var header = document.getElementById('header');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var headerHeight = header.clientHeight;
 
+    // responsive tự động đóng mở menu
+    mobileMenu.onclick = function() {
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed ) {
+            header.style.height = ' auto';
+        }else {
+            header.style.height = null;
+        }
+    }
+
+    // Tự động đóng khi chọn menu
+    var menuItems = document.querySelectorAll('#nav li a[href*="#" ]');
+    for (var i = 0 ; i < menuItems.length; i++) {
+        var menuItem  = menuItems[i];
+
+        menuItem.onclick = function() {
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+            if(isParentMenu) {
+                event.preventDefault();
+            }else {
+                header.style.height = null;
+            }
+            
+        }
+    }
+    
+    </script>
 
 </body>
 </html>

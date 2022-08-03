@@ -101,6 +101,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1; /* để nổi lên */
+ 
 }
 
 #nav {
@@ -165,17 +166,36 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-btn {
     padding: 0 23px;
     float: right;
 }
-
 
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     line-height: 46px;
@@ -183,10 +203,9 @@ html {
 
 #slider {
     position: relative;
-    padding-top: 46px;
+    top: 46px;
     padding-top: 50%;
     width: 100%;
-
     background: url(/assets/img/Band/NewYork.jpg) top center / cover no-repeat ;
 }
 
@@ -219,9 +238,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px ;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
