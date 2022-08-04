@@ -59,10 +59,6 @@ html {
     margin-top: 8px !important;
 }
 
-.s-mt-8 {
-    margin-top: 8px;
-}
-
 .mt-16 {
     margin-top: 16px !important;
 }
@@ -214,7 +210,7 @@ html {
     top: 46px;
     padding-top: 50%;
     width: 100%;
-    background: url(/assets/img/Band/NewYork.jpg) top center / cover no-repeat ;
+    background: url(../img/Sliders/Slider1.jpg) top center / cover no-repeat ;
 }
 
 
@@ -223,10 +219,8 @@ html {
     position: absolute;
     bottom: 48px;
     width: 100%;
-    text-align: center;
-    
-     color: #fff;
-
+    text-align: center; 
+    color: #fff;
 }
 
 #slider  .text-heading {
@@ -237,11 +231,7 @@ html {
 #slider  .text-description {
     margin-top: 25px;
     font-size: 15px;
-}
-
-
-#content {
-    /* padding-top: 64px; */
+    text-shadow: 0 0 1px #000;
 }
 
 #content .content-section {
@@ -249,6 +239,7 @@ html {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 64px;
     padding: 64px 0 112px ;
     padding-left: 16px;
     padding-right: 16px;
@@ -387,6 +378,15 @@ html {
 .contact-info i {
     width: 30px;
     display: inline-block;
+}
+
+.contact-info a {
+    color: #2100ee;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-form {
