@@ -3,6 +3,7 @@
 # Section
   - Header + Slider 
     <img src="https://imgur.com/a/6klsrMX">
+    (https://imgur.com/a/6klsrMX)
   - Content
     - About Section
       <img src="https://imgur.com/l7mQn2V">
